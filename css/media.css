@@ -78,6 +78,52 @@
 }
 
 @media (max-width: 767px) {
+  /*Slider*/
+
+.slider {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    margin-top: 20px;
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: cambio 25s infinite alternate linear;
+}
+
+.slider li {
+    width: 10%;
+    list-style: none;
+}
+
+.slider img {
+    border-radius: 30px;
+    float: center;
+    width: 60%;
+}
+.slider p {
+    font-size: 0.7em;
+    
+ }
+
+@keyframes cambio {
+    0%,
+    15% {
+        margin-left: 0;
+    }
+    50%,
+    65% {
+        margin-left: -100%;
+    }
+    85%,
+    100% {
+        margin-left: -200%;
+    }
+}
+/*Fin Slider*/
 
 
 .home_background {

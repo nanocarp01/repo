@@ -139,8 +139,8 @@ section {
     text-shadow: 1px 1px black;
 }
 .about-secondary{
-
-    font-size: 2em;
+    
+    font-size: 1.5em;
     position: relative;
     
 }
@@ -156,7 +156,7 @@ section {
 .section_title {
     color: var(--grey);
     font-size: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 6px;
     display: flex;
 }
 
@@ -174,7 +174,7 @@ section {
     text-align: left;
     color: var(--grey);
     padding-right: 80px;
-    line-height: 40px;
+    line-height: 18px;
 }
 .about_summary {
     margin: 30px 0;
@@ -216,6 +216,7 @@ section {
     float: center;
     width: 50%;
 }
+
 
 @keyframes cambio {
     0%,

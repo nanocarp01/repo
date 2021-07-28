@@ -8,6 +8,22 @@ const config = {
   threshold: [0.6, 0.9],
 };
 
+function mail(){
+  var mail = document.getElementById("mail")
+  var anchoVentana = window.innerWidth
+    
+  
+  if (anchoVentana > 360 ) {
+    console.log("mail");
+    mail.href = "contact.html"
+  }else{
+    console.log("mailto:fernandoheredia33@gmail.com");
+    mail.href = "mailto:fernandoheredia33@gmail.com";
+  }
+
+}
+mail();
+
 function handleLlinks() {
   if (window.innerWidth <= 991) {
     links.classList.toggle("visible");
@@ -48,6 +64,7 @@ function intersectionHandler(entry) {
     shouldBeActive.classList.add("active");
   }
 }
+
 
 
 ScrollReveal().reveal(".navbar", { delay: 250 });

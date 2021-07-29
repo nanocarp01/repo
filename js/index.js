@@ -14,7 +14,6 @@ function mail(){
     
   
   if (anchoVentana > 640 ) {
-    alert("mail");
     mail.href = "contact.html"
   }
 

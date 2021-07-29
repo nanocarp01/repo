@@ -16,9 +16,6 @@ function mail(){
   if (anchoVentana > 360 ) {
     console.log("mail");
     mail.href = "contact.html"
-  }else{
-    console.log("mailto:fernandoheredia33@gmail.com");
-    mail.href = "mailto:fernandoheredia33@gmail.com";
   }
 
 }

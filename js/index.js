@@ -13,8 +13,8 @@ function mail(){
   var anchoVentana = window.innerWidth
     
   
-  if (anchoVentana < 360 ) {
-    console.log("mail");
+  if (anchoVentana > 360 ) {
+    alert("mail");
     mail.href = "contact.html"
   }
 

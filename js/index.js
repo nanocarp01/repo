@@ -9,9 +9,9 @@ const config = {
 };
 
 function change(){
-  var lang = document.getElementById("language");
-  lang.innerHTML = "Language: ";
-  alert("Hello")
+  var etiqueta = document.getElementsById("Language")[0]; // Primer elemento con la clase price-cash
+  var texto = etiqueta.childNodes[0]; // El primer nodo 'hijo' de la etiqueta p
+  texto.nodeValue = 'VALOR NUEVO'
   
 }
 

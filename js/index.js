@@ -15,7 +15,7 @@ function change(){
   
   if(lang.contains == "Ingles"){
     lang.innerHTML = "Español";
-    text1.innerHTML= "Hello!";
+    //text1.innerHTML= "Hello!";
     
   }
   

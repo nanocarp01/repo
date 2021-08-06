@@ -10,13 +10,10 @@ const config = {
 
 function change(){
   var lang = document.getElementById("language");
-  //var text1 = document.getElementsByClassName("home_title--primary");
-  
-  
+
   if(lang.contains == "Ingles"){
-    lang.innerHTML = "Español";
-    //text1.innerHTML= "Hello!";
-    
+    alert("Ingles");
+    lang.innerHTML == "Español";
   }
   
 }

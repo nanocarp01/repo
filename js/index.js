@@ -9,8 +9,10 @@ const config = {
 };
 
 function change(){
-  
-      alert("Hello")
+  alert("Hello")
+  var etiqueta = document.getElementsById("language")[0];
+  var texto = etiqueta.childNodes[0]; // El primer nodo 'hijo' de la etiqueta p
+  texto.nodeValue = 'VALOR NUEVO';
 }
 
 

@@ -9,7 +9,8 @@ const config = {
 };
 
 function change(){
-  if(document.getElementById("language").innerHTML == "Ingles"){
+  var lang = document.getElementById("language");
+  if(lang.value == "Ingles"){
     alert("Hola");
   }
   document.getElementById("language").innerHTML = "Español";

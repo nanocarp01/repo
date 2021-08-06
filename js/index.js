@@ -10,7 +10,7 @@ const config = {
 
 function change(){
   var lang = document.getElementById("language");
-  var text1 = document.getElementsByClassName("home_title--primary");
+  //var text1 = document.getElementsByClassName("home_title--primary");
   
   
   if(lang.contains == "Ingles"){
@@ -18,7 +18,6 @@ function change(){
     //text1.innerHTML= "Hello!";
     
   }
-  
   
 }
 

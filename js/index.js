@@ -10,7 +10,7 @@ const config = {
 
 function change(){
   var lang = document.getElementById("language");
-  if(lang == "Ingles"){
+  if(lang.textContent == "Ingles"){
     alert("Hola");
   }
   lang.innerHTML = "Español";

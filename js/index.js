@@ -9,7 +9,11 @@ const config = {
 };
 
 function change(){
-    alert("hola")
+  var lang = document.getElementById("language")
+  var title1 = document.getElementById("home_title--primary")
+  if (lang == "Ingles"){
+      title1 == "Hello"
+  }
 }
 
 function mail(){

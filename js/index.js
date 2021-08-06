@@ -13,6 +13,7 @@ function change(){
   var title1 = document.getElementById("home_title--primary")
   if (lang == "Ingles"){
       title1 == "Hello"
+      alert("Hello")
   }
 }
 

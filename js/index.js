@@ -10,9 +10,13 @@ const config = {
 
 function change(){
   var lang = document.getElementById("language");
+  var etiqueta = document.getElementsByClassName("home_description")[0]; // Primer elemento con la clase price-cash
+  var texto = etiqueta.childNodes[0]; // El primer nodo 'hijo' de la etiqueta p
+  
   if(lang.contains == "Ingles"){
     lang.innerHTML = "Español";
     document.getElementsByClassName("home_title--primary").innerHTML="Hello!";
+    texto.nodeValue = 'Hello!';
   }
   
   

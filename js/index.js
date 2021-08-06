@@ -9,13 +9,8 @@ const config = {
 };
 
 function change(){
-  var lang = document.getElementById("language")
-  var title1 = document.getElementById("home_title--primary")
-  if (lang == "Ingles"){
+  
       alert("Hello")
-      title1.innerHTML = "Home"
-      
-  }
 }
 
 

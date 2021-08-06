@@ -9,6 +9,9 @@ const config = {
 };
 
 function change(){
+  if(document.getElementById("language").innerHTML = "Español"){
+    alert("Hola");
+  }
   document.getElementById("language").innerHTML = "Español";
   
 }

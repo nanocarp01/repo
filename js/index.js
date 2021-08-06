@@ -8,6 +8,10 @@ const config = {
   threshold: [0.6, 0.9],
 };
 
+function change(){
+    alert("hola")
+}
+
 function mail(){
   var mail = document.getElementById("mail")
   var anchoVentana = window.innerWidth

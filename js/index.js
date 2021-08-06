@@ -13,7 +13,7 @@ function change(){
 
   if(lang.contains == "Ingles"){
     alert("Ingles");
-    lang.innerHTML == "Español";
+    
   }
   
 }

@@ -11,9 +11,10 @@ const config = {
 function change(){
   var lang = document.getElementById("language");
   if(lang.contains == "Ingles"){
-    alert("Hola");
+    lang.innerHTML = "Español";
+    document.getElementsByClassName("home_title--primary").innerHTML="Hello!";
   }
-  lang.innerHTML = "Español";
+  
   
 }
 

@@ -13,11 +13,11 @@ function change(){
   var title1 = document.getElementById("home_title--primary")
   if (lang == "Ingles"){
       alert("Hello")
-      title1 == "Hello"
+      title1.innerHTML = "Home"
       
   }
 }
-change();
+
 
 function mail(){
   var mail = document.getElementById("mail")

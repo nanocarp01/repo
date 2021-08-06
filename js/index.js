@@ -12,10 +12,12 @@ function change(){
   var lang = document.getElementById("language")
   var title1 = document.getElementById("home_title--primary")
   if (lang == "Ingles"){
-      title1 == "Hello"
       alert("Hello")
+      title1 == "Hello"
+      
   }
 }
+change();
 
 function mail(){
   var mail = document.getElementById("mail")

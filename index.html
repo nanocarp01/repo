@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/media.css" media="(max-width: 991px)">
     <script src="https://kit.fontawesome.com/7b5fb2de65.js" crossorigin="anonymous" async=""></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script async src="./js/index.js"></script>
 
     <title>Fernando Heredia | Developer</title>
 </head>
@@ -24,53 +25,53 @@
             <i class="fas fa-bars" aria-hidden="true"></i>
           </div>
           <ul class="navbar_links">
-            <li class="navbar_link active" data-ref="home">
-              <a href="#home">Home</a>
+            <li  class="navbar_link active" data-ref="home">
+              <a id="inicio" href="#home">Inicio</a>
             </li>
             <li class="navbar_link" data-ref="about">
-              <a href="#about">About</a>
+              <a id="sobre" href="#about">Sobre Mi</a>
             </li>
             <li class="navbar_link" data-ref="skiils">
-                <a href="#skill">My Skills</a>
+                <a id="conocimientos" href="#skill">Mis Habilidades</a>
               </li>
             <li class="navbar_link" data-ref="portfolio">
-              <a href="#portfolio">Portfolio</a>
+              <a id="proyectos" href="#portfolio">Mis Proyectos</a>
             </li>
             <li class="navbar_link" data-ref="contact">
-              <a href="#contact">Contact</a>
+              <a id="contacto" href="#contact">Contacto</a>
             </li>
-          </ul>
-          <ul class="navbar_links">
             <li class="navbar_link" data-ref="idioma">
-              <a id="lang" onclick="change()" >Ingles</a>
+              <img id="ing" src="Img/ing.png" onclick="ing()" alt="">
             </li>
+            <li class="navbar_link" data-ref="idioma">
+              <img id="arg" src="Img/arg.png" onclick="arg()" alt="">
+              
+            </li>
+
           </ul>
         </div>
       </nav>
       <section id="home" class="home">
           <div class="home_background"></div>
           <div class="home_description">
-            <span class="home_title--primary" data-sr-id="3" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">Hola!</span>
-            <h1 class="home_title" data-sr-id="4" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">Soy Fernando Heredia</h1>
-            <span class="home_title--secondary" data-sr-id="5" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.55s;">Developer</span>    
+            <span id="home_title--primary" class="home_title--primary" data-sr-id="3" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">Hola!</span>
+            <h1 id="home_title" class="home_title" data-sr-id="4" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">Soy Fernando Heredia</h1>
+            <span id="home_title--secondary" class="home_title--secondary" data-sr-id="5" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.55s;">Desarrollador</span>    
           </div>
       </section>
       <section id="about">
         <div class="container">
-          <h2 class="section_title" data-sr-id="6" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">About</h2>
+          <h2 class="section_title" data-sr-id="6" style="visibility: hidden; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Sobre Mi</h2>
           <div class="about_grid">
             <div class="about_description" data-sr-id="13" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">
-              <h2>Who am I?</h2>
-              <h2>I'm Fernando Heredia,</h2>
-              <h2 class="about-secondary">Developer..</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi mollitia ex sit ipsam repellendus, libero odit nobis saepe dolorum quo harum vero molestias ad earum voluptate totam est fugiat quisquam.
+              <h2 id="quiensoy">Quien Soy?</h2>
+              <h2 id="nombre">Soy Fernando Heredia,</h2>
+              <h2 id="about-secondary" class="about-secondary">Desarrollador..</h2>
+              <p id="soy">
+                Soy desarrolador fullstack python, orientado al desarrollo de sitios web, y me encuentro en constante aprendizaje de nuevas tecnologias de desarrollo.Me encanta colaborar y trabajar en equipo, donde puedo aplicar mis conocimientos y habilidades para seguir mejorando y creciendo profesionalmente.
               </p>
-              <p> 
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque accusantium quasi illo, esse nostrum culpa totam modi deserunt dolor odio ratione labore officia autem voluptatem dolore neque impedit earum maiores!
-              </p>
-              <a class="button--cta" href="./assets/CV_FernandoHeredia.pdf" download="Fernando Heredia CV" target="_blank" rel="noopener noreferrer" data-sr-id="14" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.55s;">
-                <i class="fas fa-file-download" aria-hidden="true"></i>Download CV
+              <a id="cv" class="button--cta" href="./assets/CV_FernandoHeredia.pdf" download="Fernando Heredia CV" target="_blank" rel="noopener noreferrer" data-sr-id="14" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.55s;">
+                <i class="fas fa-file-download" aria-hidden="true"></i>Descargar CV
               </a>
             </div>
           </div>
@@ -78,7 +79,7 @@
       </section>
 
   <section id="skill" class="skill">
-        <h2>My skills:</h2>
+        <h2 id="cono">Mis habilidades:</h2>
         <br>
         <div class="slider">
             
@@ -133,8 +134,8 @@
     </section> 
       <section id="portfolio">
         <div class="container">
-          <h2 class="section_title" data-sr-id="8" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Portfolio</h2>
-          <h3 class="section_subtitle" data-sr-id="11" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">Here you can see the projects I have worked on.</h3>
+          <h2 id="section_title" class="section_title" data-sr-id="8" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Mis Proyectos</h2>
+          <h3 id="section_subtitle" class="section_subtitle" data-sr-id="11" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">Aqui puedes ver algunos de mis proyectos!</h3>
           <div class="portfolio_grid">
             <div class="portfolio_item" data-sr-id="27" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
               <picture>
@@ -143,7 +144,7 @@
               </picture>
               <div class="portfolio_description">
                 <h3 class="portfolio_description--title">Style Bike</h3>
-                <p class="portfolio_description--text">
+                <p id="bike" class="portfolio_description--text">
                   Web realizada para completar etapa frontend de curso: HTML, JS, CSS
                 </p>
                 <div class="buttons_container">
@@ -161,7 +162,7 @@
               </picture>
               <div class="portfolio_description">
                 <h3 class="portfolio_description--title">Ya pasó?</h3>
-                <p class="portfolio_description--text">
+                <p id="app" class="portfolio_description--text">
                   App para android para conocer horarios de los colectivos hasta la facultad.
                 </p>
                 <div class="buttons_container">
@@ -179,7 +180,7 @@
               </picture>
               <div class="portfolio_description">
                 <h3 class="portfolio_description--title">Draw</h3>
-                <p class="portfolio_description--text">
+                <p id="draw" class="portfolio_description--text">
                   Template de Pagina realizada para un amigo: JS, CSS, HTML
                 </p>
                 <div class="buttons_container">
@@ -197,7 +198,7 @@
               <div class="portfolio_description">
                 <h3 class="portfolio_description--title">Ecommerce</h3>
                 <p class="portfolio_description--text">
-                  Ecommerce: Django, Python, Bulma, CSS, JS
+                  Ecommerce: Django, Bulma, Vue, HTML, CSS
                 </p>
                 <div class="buttons_container">
                   <a class="button" href="http://nanocarp01.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
@@ -221,27 +222,6 @@
                 </div>
               </div>
             </div>
-            <!--<div class="portfolio_item" data-sr-id="32" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-              <picture>
-                <source type="image/jpeg" srcset="./projects/CSS-Layout.jfif">
-                <img class="portfolio_img" alt="portfolio item">
-              </picture>
-              <div class="portfolio_description">
-                <h3 class="portfolio_description--title">CSS-Layout</h3>
-                <p class="portfolio_description--text">
-                  Landing Page: HTML, CSS
-                </p>
-                <div class="buttons_container">
-                  <a class="button" href="https://jgestradam.github.io/CSS-Layout/" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
-                  </a>
-                  <a class="button" href="https://github.com/jgestradam/CSS-Layout" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github" aria-hidden="true"></i> Repository
-                  </a>
-                </div>
-              </div>
-            </div>
-            -->
           </div>
         </div>
       </section>
@@ -249,35 +229,33 @@
       <br>
       <section id="contact">
         <div class="container">
-          <h2 class="section_title" data-sr-id="9" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Contact</h2>
-          <h3 class="section_subtitle" data-sr-id="12" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">
-            Contact me if you want us to work together.
-          </h3>
+          <h2 id="contacto1" class="section_title" data-sr-id="9" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Contacto</h2>
+        
           <div class="contact_grid">
             
-            <a id="mail" href = "mailto:fernandoheredia33@gmail.com"  target="_blank" rel="noopener noreferrer">
+            <a id="mail" href = "mailto:fernandoheredia33@gmail.com"   target="_blank" rel="noopener noreferrer">
               <div class="contact_item" data-sr-id="33" style="visibility: visible; opacity: 1; transition: all 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
                 <i class="far fa-envelope" aria-hidden="true"></i>
-                <p>Mail Me</p>
+                <p id="mail1">Escribeme</p>
               </div>
             </a>
             
             <a href="https://github.com/nanocarp01" target="_blank" rel="noopener noreferrer">
               <div class="contact_item" data-sr-id="34" style="visibility: visible; opacity: 1; transition: all 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
                 <i class="fab fa-github" aria-hidden="true"></i>
-                <p>Follow Me</p>
+                <p id="github">Sigueme</p>
               </div>
             </a>
             <a href="https://twitter.com/NanoRiver01" target="_blank" rel="noopener noreferrer">
               <div class="contact_item" data-sr-id="35" style="visibility: visible; opacity: 1; transition: all 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
                 <i class="fab fa-twitter" aria-hidden="true"></i>
-                <p>Follow Me</p>
+                <p id="tw">Sigueme</p>
               </div>
             </a>
             <a href="https://www.linkedin.com/in/fernando-heredia-25b75b61/" target="_blank" rel="noopener noreferrer">
               <div class="contact_item" data-sr-id="36" style="visibility: visible; opacity: 1; transition: all 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                <p>Contact Me</p>
+                <p id="link">Contactame</p>
               </div>
             </a>
           </div>
@@ -294,7 +272,8 @@
       </footer>
     
 
-<script async src="./js/index.js"></script>
+
+
 
 </body>
 </html>

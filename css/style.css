@@ -152,6 +152,9 @@ section {
     background:#fff;
     border-left: 1px solid #000;
 }
+#soy{
+    font-size: 1.2em;
+}
 
 .section_title {
     color: var(--grey);

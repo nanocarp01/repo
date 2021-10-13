@@ -92,7 +92,8 @@ function arg(){
   var linkedin = document.getElementById("link");
 
 
-  ini.innerHTML = "Inicio";
+    
+    ini.innerHTML = "Inicio";
     sobre.innerHTML = "Sobre Mi";
     cono.innerHTML = "Mis Habilidades";
     proy.innerHTML = "Mis Proyectos";

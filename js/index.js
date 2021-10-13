@@ -47,7 +47,7 @@ function ing(){
     soy.innerHTML = "Who am I?";
     nom.innerHTML = "I´m Fernando Heredia,";
     dev.innerHTML = "Developer...";
-    soy1.innerHTML = "I am a full stack python developer oriented to the development of websites, and I am constantly learning new development technologies. I love collaborating and working as a team, where i can apply my knowledge and skills to continue improving and growing professionally ";
+    soy1.innerHTML = "I am a full stack python developer, and I am constantly learning new development technologies. I love collaborating and working as a team, where i can apply my knowledge and skills to continue improving and growing professionally ";
     cv.innerHTML = "Dowload CV";
     cv.href = "./assets/CV_FernandoHeredia_ing.pdf";
     skill.innerHTML = "My Skills";

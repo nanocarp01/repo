@@ -41,7 +41,7 @@ function ing(){
     cono.innerHTML = "Skill";
     proy.innerHTML = "Portfolio";
     cont.innerHTML = "Contact";
-    text1.innerHTML = "Hello!";
+    text1.innerHTML = "Hello World!";
     text2.innerHTML = "I´m Fernando Heredia";
     text3.innerHTML = "Developer";
     soy.innerHTML = "Who am I?";

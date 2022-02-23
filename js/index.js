@@ -98,7 +98,7 @@ function arg(){
     cono.innerHTML = "Mis Habilidades";
     proy.innerHTML = "Mis Proyectos";
     cont.innerHTML = "Contacto";
-    text1.innerHTML = "Hola!";
+    text1.innerHTML = "Hola Mundo!";
     text2.innerHTML = "Soy Fernando Heredia";
     text3.innerHTML = "Desarrollador";
     soy.innerHTML = "Quien Soy?";

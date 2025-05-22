@@ -47,7 +47,7 @@ function ing(){
     soy.innerHTML = "Who am I?";
     nom.innerHTML = "I´m Fernando Heredia,";
     dev.innerHTML = "Developer...";
-    soy1.innerHTML = "I am a full stack python developer, and I am constantly learning new development technologies. I love collaborating and working as a team, where i can apply my knowledge and skills to continue improving and growing professionally ";
+    soy1.innerHTML = "I’m a full-stack developer with professional experience in PHP and currently expanding my skills in Python technologies. I’ve worked on API integrations, process automation, and real-world systems such as AFIP (Argentina’s tax authority), local payment platforms, Mikrotik devices, and biometric attendance systems — all connected via SSH.";
     cv.innerHTML = "Dowload CV";
     cv.href = "./assets/CV_FernandoHeredia_ing.pdf";
     skill.innerHTML = "My Skills";
@@ -104,7 +104,7 @@ function arg(){
     soy.innerHTML = "Quien Soy?";
     nom.innerHTML = "Soy Fernando Heredia,";
     dev.innerHTML = "Desarrolador...";
-    soy1.innerHTML = "Soy desarrolador fullstack python, orientado al desarrollo de sitios web, y me encuentro en constante aprendizaje de nuevas tecnologias de desarrollo.Me encanta colaborar y trabajar en equipo, donde puedo aplicar mis conocimientos y habilidades para seguir mejorando y creciendo profesionalmente.";
+    soy1.innerHTML = "Soy desarrollador full stack con experiencia profesional en PHP y en constante formación en tecnologías Python. He trabajado integrando APIs, automatizando procesos y conectando sistemas reales como AFIP, plataformas de pago en Argentina, dispositivos Mikrotik y relojes biométricos, todos mediante conexión SSH.";
     cv.innerHTML = "Descargar CV";
     cv.href = "./assets/CV_FernandoHeredia.pdf";
     skill.innerHTML = "Mis Habilidades";

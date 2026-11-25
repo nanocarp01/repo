@@ -98,6 +98,7 @@ const EN = {
   "form.name": "Name",
   "form.message": "Message",
   "form.send": "Send message",
+  "form.privacy": "I only use your details to reply to you. I don't store or share them.",
 
   "footer.top": "Back to top ↑",
 };
@@ -172,3 +173,58 @@ document.querySelectorAll(".reveal").forEach((el, i) => {
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Formulario de contacto: envío a Formspree sin salir de la página
+const FORM_MSG = {
+  es: {
+    sending: "Enviando…",
+    ok: "¡Gracias por escribirme! Te respondo a la brevedad.",
+    error: 'No se pudo enviar el mensaje. Probá de nuevo o escribime a <a href="mailto:fernandoheredia33@gmail.com">fernandoheredia33@gmail.com</a>.',
+    subject: (name) => `Portfolio: mensaje de ${name}`,
+  },
+  en: {
+    sending: "Sending…",
+    ok: "Thanks for reaching out! I'll get back to you soon.",
+    error: 'The message could not be sent. Please try again or email me at <a href="mailto:fernandoheredia33@gmail.com">fernandoheredia33@gmail.com</a>.',
+    subject: (name) => `Portfolio: message from ${name}`,
+  },
+};
+
+const form = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+function showStatus(type, html) {
+  formStatus.hidden = false;
+  formStatus.className = "form__status is-" + type;
+  formStatus.innerHTML = html;
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const msg = FORM_MSG[document.documentElement.lang === "en" ? "en" : "es"];
+  const button = form.querySelector('button[type="submit"]');
+  const label = button.innerHTML;
+
+  const data = new FormData(form);
+  data.set("_subject", msg.subject(String(data.get("name")).trim()));
+
+  button.disabled = true;
+  button.textContent = msg.sending;
+  formStatus.hidden = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    form.reset();
+    showStatus("ok", msg.ok);
+  } catch (err) {
+    showStatus("error", msg.error);
+  } finally {
+    button.disabled = false;
+    button.innerHTML = label;
+  }
+});

@@ -500,7 +500,18 @@ strong { color: var(--text); font-weight: 600; }
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(124,156,255,.2);
 }
-.form .btn { justify-self: start; }
+.form__footer { display: grid; gap: 10px; justify-items: start; }
+.form__privacy { font-size: .8rem; color: var(--muted); }
+.form .btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.form__status {
+  font-size: .92rem;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.form__status a { text-decoration: underline; }
+.form__status.is-ok    { color: var(--accent-2); border-color: rgba(94,234,212,.35); background: rgba(94,234,212,.08); }
+.form__status.is-error { color: #fca5a5; border-color: rgba(252,165,165,.35); background: rgba(252,165,165,.08); }
 .hp { display: none; }
 
 /* ---------- Footer ---------- */

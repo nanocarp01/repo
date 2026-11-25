@@ -355,22 +355,26 @@
           </ul>
         </div>
 
-        <form class="form reveal" action="https://formspree.io/f/xdoywkpe" method="POST">
+        <form class="form reveal" id="contactForm" action="https://formspree.io/f/xdoywkpe" method="POST">
           <label>
             <span data-i18n="form.name">Nombre</span>
-            <input type="text" name="name" required autocomplete="name">
+            <input type="text" name="name" required maxlength="100" autocomplete="name">
           </label>
           <label>
             <span>Email</span>
-            <input type="email" name="_replyto" required autocomplete="email">
+            <input type="email" name="email" required maxlength="254" autocomplete="email">
           </label>
           <label>
             <span data-i18n="form.message">Mensaje</span>
-            <textarea name="message" rows="5" required></textarea>
+            <textarea name="message" rows="5" required minlength="10" maxlength="5000"></textarea>
           </label>
-          <input type="hidden" name="_subject" value="Nuevo mensaje desde el portfolio">
-          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
-          <button type="submit" class="btn btn--primary" data-i18n="form.send">Enviar mensaje</button>
+          <input type="hidden" name="_subject" value="Portfolio: nuevo mensaje">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form__footer">
+            <button type="submit" class="btn btn--primary" data-i18n="form.send">Enviar mensaje</button>
+            <p class="form__privacy" data-i18n="form.privacy">Solo uso tus datos para responderte. No los guardo ni los comparto.</p>
+          </div>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite" hidden></p>
         </form>
       </div>
     </section>

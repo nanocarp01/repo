@@ -1,261 +1,297 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-    <script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css" media="(max-width: 991px)">
-    <script src="https://kit.fontawesome.com/7b5fb2de65.js" crossorigin="anonymous" async=""></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script async src="./js/index.js"></script>
-
-    <title>Fernando Heredia | Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fernando Heredia, desarrollador backend: PHP/Laravel, Node.js/TypeScript, wallets, integraciones de pago y microservicios.">
+  <title>Fernando Heredia | Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script defer src="js/index.js"></script>
 </head>
 <body>
-      <nav class="navbar" data-sr-id="0" style="visibility: visible; opacity: 1; transition: background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">
-        <div class="container">
-          <div class="navbar_logo">
-            <p class="navbar_title">
-              <a href="#home">Nano</a>
-            </p>
-          </div>
-          <div class="navbar_menu">
-            <i class="fas fa-bars" aria-hidden="true"></i>
-          </div>
-          <ul class="navbar_links">
-            <li  class="navbar_link active" data-ref="home">
-              <a id="inicio" href="#home">Inicio</a>
-            </li>
-            <li class="navbar_link" data-ref="about">
-              <a id="sobre" href="#about">Sobre Mi</a>
-            </li>
-            <li class="navbar_link" data-ref="skiils">
-                <a id="conocimientos" href="#skill">Mis Habilidades</a>
-              </li>
-            <li class="navbar_link" data-ref="portfolio">
-              <a id="proyectos" href="#portfolio">Mis Proyectos</a>
-            </li>
-            <li class="navbar_link" data-ref="contact">
-              <a id="contacto" href="#contact">Contacto</a>
-            </li>
-            <li class="navbar_link" data-ref="idioma">
-              <img id="ing" src="Img/ing.png" onclick="ing()" alt="">
-            </li>
-            <li class="navbar_link" data-ref="idioma">
-              <img id="arg" src="Img/arg.png" onclick="arg()" alt="">
-              
-            </li>
 
-          </ul>
-        </div>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo">nano<span>.dev</span></a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
       </nav>
-      <section id="home" class="home">
-          <div class="home_background"></div>
-          <div class="home_description">
-            <span id="home_title--primary" class="home_title--primary" data-sr-id="3" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">Hola Mundo!</span>
-            <h1 id="home_title" class="home_title" data-sr-id="4" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">Soy Fernando Heredia</h1>
-            <span id="home_title--secondary" class="home_title--secondary" data-sr-id="5" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.55s;">Desarrollador</span>    
-          </div>
-      </section>
-      <section id="about">
-        <div class="container">
-          <h2 class="section_title" data-sr-id="6" style="visibility: hidden; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Sobre Mi</h2>
-          <div class="about_grid">
-            <div class="about_description" data-sr-id="13" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">
-              <h2 id="quiensoy">Quien Soy?</h2>
-              <h2 id="nombre">Soy Fernando Heredia</h2>
-              <h2 id="about-secondary" class="about-secondary">Desarrollador..</h2>
-              <p id="soy">
-                Soy desarrollador full stack con experiencia profesional en PHP y en constante formación en tecnologías Python. He trabajado integrando APIs, automatizando procesos y conectando sistemas reales como AFIP, plataformas de pago en Argentina, dispositivos Mikrotik y relojes biométricos, todos mediante conexión SSH.
-              </p>
-              <a id="cv" class="button--cta" href="./assets/CV_FernandoHeredia.pdf" download="Fernando Heredia CV" target="_blank" rel="noopener noreferrer" data-sr-id="14" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.55s;">
-                <i class="fas fa-file-download" aria-hidden="true"></i>Descargar CV
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-  <section id="skill" class="skill">
-        <h2 id="cono">Mis habilidades:</h2>
-        <br>
-        <div class="slider">
-            
-        <ul>
-            <li>
-                <img src="Img/html.png" alt="">
-                <p>HTML</p>
-            </li>
-            <li>
-                <img src="Img/css.png" alt="">
-                <p>CSS</p>
-            </li>
-            <li>
-                <img src="Img/js.png" alt="">
-                <p>JAVASCRIPT</p>
-            </li>
-            <li>
-                <img src="Img/vue.png" alt="">
-                <p>VUE.JS</p>
-            </li>
-            <li>
-                <img src="Img/bootstrap.png" alt="">
-                <p>BOOTSTRAP</p>
-            </li>
-	     <li>
-              <img src="Img/Bulma.png" alt="">
-              <p>BULMA</p>
-            </li>
-            <li>
-                <img src="Img/python.png" alt="">
-                <p>PYTHON</p>
-            </li>
-            <li>
-                <img src="Img/django.png" alt="">
-                <p>DJANGO</p>
-            </li>
-            <li>
-                <img src="Img/mysql.png" alt="">
-                <p>MYSQL</p>
-            </li>
-            <li>
-                <img src="Img/postgresql.png" alt="">
-                <p>POSTGRESQL</p>
-            </li>
-            <li>
-                <img src="Img/git.png" alt="">
-                <p>GIT</p>
-            </li>
-            <li>
-                <img src="Img/powerbi.png" alt="">
-                <p>POWER-BI</p>
-            </li>
-        </ul>
+      <div class="nav__actions">
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang__btn is-active" data-lang="es">ES</button>
+          <button type="button" class="lang__btn" data-lang="en">EN</button>
         </div>
-        
-    </section> 
-      <section id="portfolio">
-        <div class="container">
-          <h2 id="section_title" class="section_title" data-sr-id="8" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Mis Proyectos</h2>
-          <h3 id="section_subtitle" class="section_subtitle" data-sr-id="11" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.35s;">Aqui puedes ver algunos de mis proyectos!</h3>
-          <div class="portfolio_grid">
-            <div class="portfolio_item" data-sr-id="27" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-              <picture>
-                <source type="image/jpeg" srcset="./projects/style-bike.webp">
-                <img class="portfolio_img" alt="portfolio item">
-              </picture>
-              <div class="portfolio_description">
-                <h3 class="portfolio_description--title">Style Bike</h3>
-                <p id="bike" class="portfolio_description--text">
-                  Web realizada para completar etapa frontend de curso: HTML, JS, CSS
-                </p>
-                <div class="buttons_container">
-                  <a class="button" href="https://stylebike.netlify.app/" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
-                  </a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="portfolio_item" data-sr-id="28" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-              <picture>
-                <source type="image/jpeg" srcset="./projects/colectivohora.webp">
-                <img class="portfolio_img" alt="portfolio item">
-              </picture>
-              <div class="portfolio_description">
-                <h3 class="portfolio_description--title">Ya pasó?</h3>
-                <p id="app" class="portfolio_description--text">
-                  App para android para conocer horarios de los colectivos hasta la facultad.
-                </p>
-                <div class="buttons_container">
-                  <a class="button" href="https://play.google.com/store/apps/details?id=com.horario.app_horarios_ver_2" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-globe-americas" aria-hidden="true"></i> PlayStore
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="portfolio_item" data-sr-id="29" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-              <picture>
-                <source type="image/jpeg" srcset="./projects/davi.webp">
-                <img class="portfolio_img" alt="portfolio item">
-              </picture>
-              <div class="portfolio_description">
-                <h3 class="portfolio_description--title">Draw</h3>
-                <p id="draw" class="portfolio_description--text">
-                  Template de Pagina realizada para un amigo: JS, CSS, HTML
-                </p>
-                <div class="buttons_container">
-                  <a class="button" href="https://ejemplodraw.netlify.app/" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
-                  </a>
-                </div>
-              </div>
-            </div>
-           
-            <div class="portfolio_item" data-sr-id="31" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-              <picture>
-                <source type="image/jpeg" srcset="./projects/rickandmorty.webp">
-                <img class="portfolio_img" alt="portfolio item">
-              </picture>
-              <div class="portfolio_description">
-                <h3 class="portfolio_description--title">Rick & Morty</h3>
-                <p class="portfolio_description--text">Website: VUE.js</p>
-                <div class="buttons_container">
-                  <a class="button" href="https://rickandmorty-vue.netlify.app/" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-globe-americas" aria-hidden="true"></i> Website
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <button type="button" class="nav__toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-      <br>
-      <section id="contact">
-        <div class="container">
-          <h2 id="contacto1" class="section_title" data-sr-id="9" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s;">Contacto</h2>
-        
-          <div class="contact_grid">
-            
-            <a id="mail" href = "mailto:fernandoheredia33@gmail.com"   target="_blank" rel="noopener noreferrer">
-              <div class="contact_item" data-sr-id="33" style="visibility: visible; opacity: 1; transition: all 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-                <i class="far fa-envelope" aria-hidden="true"></i>
-                <p id="mail1">Escribeme</p>
-              </div>
-            </a>
-            
-            <a href="https://github.com/nanocarp01" target="_blank" rel="noopener noreferrer">
-              <div class="contact_item" data-sr-id="34" style="visibility: visible; opacity: 1; transition: all 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-                <i class="fab fa-github" aria-hidden="true"></i>
-                <p id="github">Sigueme</p>
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/fernando-heredia-25b75b61/" target="_blank" rel="noopener noreferrer">
-              <div class="contact_item" data-sr-id="36" style="visibility: visible; opacity: 1; transition: all 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                <p id="link">Contactame</p>
-              </div>
-            </a>
-          </div>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="hero.status">Backend Developer · trabajando en Degestec</span></p>
+        <h1 class="hero__title reveal">Fernando Heredia</h1>
+        <p class="hero__lead reveal" data-i18n="hero.lead">
+          Construyo APIs, wallets y microservicios para plataformas de juego online, con foco en seguridad, concurrencia y en que los números siempre cuadren.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary" data-i18n="hero.cta1">Ver proyectos</a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta2">Hablemos</a>
         </div>
-      </section>
 
-      <footer class="footer" data-sr-id="37" style="visibility: visible; opacity: 1; transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.45s;">
-        <div class="container">
-          <p>
-            Copyright © 2021. <a href="#">@fheredia</a> <br>
-            All Rights Reserved
+        <dl class="stats reveal">
+          <div><dt>17</dt><dd data-i18n="stats.months">meses en backend de iGaming</dd></div>
+          <div><dt>900+</dt><dd data-i18n="stats.commits">commits en producción</dd></div>
+          <div><dt>13</dt><dd data-i18n="stats.repos">repositorios</dd></div>
+          <div><dt>2</dt><dd data-i18n="stats.services">microservicios creados desde cero</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="section__head reveal">
+          <span class="section__num">01</span>
+          <h2 data-i18n="about.title">Sobre mí</h2>
+        </div>
+        <div class="about__body reveal">
+          <p data-i18n="about.p1">
+            Soy desarrollador backend con foco en <strong>PHP/Laravel</strong> y <strong>Node.js/TypeScript</strong>. Desde junio de 2025 trabajo en Degestec, en el sector de juego online y bingo: desarrollo el backend principal de una plataforma de casino online y diseñé desde cero los microservicios de promociones y fidelización.
+          </p>
+          <p data-i18n="about.p2">
+            Me gusta el trabajo donde los detalles importan: saldos que no pueden duplicarse, transacciones que llegan tarde, webhooks que hay que verificar y reportes financieros que tienen que dar exactos. Antes trabajé como full stack integrando APIs y sistemas reales —AFIP, pasarelas de pago, dispositivos Mikrotik y relojes biométricos vía SSH— y sigo formándome en Python.
           </p>
         </div>
-      </footer>
-    
 
+        <div class="focus">
+          <article class="card reveal">
+            <h3 data-i18n="focus.1.t">Wallets y pagos</h3>
+            <p data-i18n="focus.1.d">Wallets multidivisa (saldo, bonus, free spins), recargas, retiradas y conciliación bancaria.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="focus.2.t">Integraciones</h3>
+            <p data-i18n="focus.2.d">Wallet seamless con agregadores y proveedores de juego: idempotencia, firma HMAC y transacciones tardías.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="focus.3.t">Microservicios</h3>
+            <p data-i18n="focus.3.d">Promociones y fidelización con Node, Prisma y Kafka: campañas, niveles, recompensas y patrón outbox.</p>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="focus.4.t">Seguridad</h3>
+            <p data-i18n="focus.4.d">Protección SSRF, rotación de refresh tokens, rate limiting, 2FA y datos sensibles fuera de los logs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">02</span>
+          <h2 data-i18n="exp.title">Experiencia</h2>
+        </div>
 
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__meta">
+              <span class="timeline__date" data-i18n="exp.1.date">jun 2025 — actualidad</span>
+            </div>
+            <div class="timeline__content">
+              <h3>Backend Developer <span class="at">· Degestec</span></h3>
+              <p class="timeline__summary" data-i18n="exp.1.summary">Backend de una plataforma de casino online y de sistemas de gestión de salas de bingo, en un ecosistema de microservicios.</p>
+              <ul class="bullets">
+                <li data-i18n="exp.1.b1">Backend principal del casino (Laravel 12): API de jugadores y backoffice, wallets multidivisa, recargas y retiradas, reportes y tiempo real con Laravel Reverb.</li>
+                <li data-i18n="exp.1.b2">Integración seamless con agregadores y proveedores de juego: wallet idempotente, firma HMAC v2, control de concurrencia y transacciones tardías.</li>
+                <li data-i18n="exp.1.b3">Diseño y desarrollo desde cero de los microservicios de Promociones y Fidelización (Node.js, TypeScript, Prisma, Kafka), con webhooks firmados con anti-replay.</li>
+                <li data-i18n="exp.1.b4">Reportes financieros y regulatorios para varios mercados (España y Chile) y plataforma de pagos con conciliación bancaria.</li>
+                <li data-i18n="exp.1.b5">Calidad: tests con Pest, análisis estático con PHPStan, OpenAPI, CI y Conventional Commits.</li>
+              </ul>
+              <ul class="tags">
+                <li>Laravel</li><li>Node.js</li><li>TypeScript</li><li>Prisma</li><li>Kafka</li><li>MariaDB</li><li>PostgreSQL</li><li>Docker</li><li>Sentry</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__meta">
+              <span class="timeline__date" data-i18n="exp.2.date">antes de 2025</span>
+            </div>
+            <div class="timeline__content">
+              <h3 data-i18n="exp.2.title">Desarrollador Full Stack</h3>
+              <p class="timeline__summary" data-i18n="exp.2.summary">Integración de APIs y automatización de procesos conectando sistemas del mundo real.</p>
+              <ul class="bullets">
+                <li data-i18n="exp.2.b1">Integración con AFIP y plataformas de pago de Argentina.</li>
+                <li data-i18n="exp.2.b2">Automatización de dispositivos Mikrotik y relojes biométricos mediante SSH.</li>
+              </ul>
+              <ul class="tags">
+                <li>PHP</li><li>JavaScript</li><li>Vue</li><li>MySQL</li><li>SSH</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">03</span>
+          <h2 data-i18n="stack.title">Stack</h2>
+        </div>
+
+        <div class="stack">
+          <div class="stack__group reveal">
+            <h3>Backend</h3>
+            <ul class="tags tags--lg">
+              <li>PHP 8</li><li>Laravel</li><li>Node.js</li><li>TypeScript</li><li>Prisma</li><li>Sanctum</li><li>Python</li><li>Django</li>
+            </ul>
+          </div>
+          <div class="stack__group reveal">
+            <h3 data-i18n="stack.data">Datos y mensajería</h3>
+            <ul class="tags tags--lg">
+              <li>MariaDB</li><li>PostgreSQL</li><li>MySQL</li><li>Kafka</li><li>WebSockets · Reverb</li>
+            </ul>
+          </div>
+          <div class="stack__group reveal">
+            <h3>Frontend</h3>
+            <ul class="tags tags--lg">
+              <li>Vue</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>Bulma</li>
+            </ul>
+          </div>
+          <div class="stack__group reveal">
+            <h3 data-i18n="stack.quality">Calidad e infraestructura</h3>
+            <ul class="tags tags--lg">
+              <li>Pest</li><li>PHPStan</li><li>OpenAPI</li><li>Docker</li><li>Sentry</li><li>Git</li><li>CI</li><li>Power BI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">04</span>
+          <h2 data-i18n="projects.title">Proyectos personales</h2>
+        </div>
+
+        <div class="projects">
+          <a class="project reveal" href="https://stylebike.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div class="project__img"><img src="projects/style-bike.webp" alt="Style Bike" loading="lazy"></div>
+            <div class="project__body">
+              <h3>Style Bike <span class="arrow" aria-hidden="true">↗</span></h3>
+              <p data-i18n="projects.bike">Sitio web hecho para completar la etapa frontend de un curso.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </a>
+
+          <a class="project reveal" href="https://play.google.com/store/apps/details?id=com.horario.app_horarios_ver_2" target="_blank" rel="noopener noreferrer">
+            <div class="project__img"><img src="projects/colectivohora.webp" alt="Ya pasó?" loading="lazy"></div>
+            <div class="project__body">
+              <h3>¿Ya pasó? <span class="arrow" aria-hidden="true">↗</span></h3>
+              <p data-i18n="projects.app">App Android para consultar los horarios de los colectivos hasta la facultad.</p>
+              <ul class="tags"><li>Android</li><li>Play Store</li></ul>
+            </div>
+          </a>
+
+          <a class="project reveal" href="https://ejemplodraw.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div class="project__img"><img src="projects/davi.webp" alt="Draw" loading="lazy"></div>
+            <div class="project__body">
+              <h3>Draw <span class="arrow" aria-hidden="true">↗</span></h3>
+              <p data-i18n="projects.draw">Plantilla de sitio web hecha para un amigo.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </a>
+
+          <a class="project reveal" href="https://rickandmorty-vue.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <div class="project__img"><img src="projects/rickandmorty.webp" alt="Rick & Morty" loading="lazy"></div>
+            <div class="project__body">
+              <h3>Rick &amp; Morty <span class="arrow" aria-hidden="true">↗</span></h3>
+              <p data-i18n="projects.rick">Explorador de personajes consumiendo una API pública.</p>
+              <ul class="tags"><li>Vue.js</li><li>REST API</li></ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div class="contact__intro reveal">
+          <div class="section__head">
+            <span class="section__num">05</span>
+            <h2 data-i18n="contact.title">Contacto</h2>
+          </div>
+          <p class="contact__lead" data-i18n="contact.lead">¿Tenés un proyecto o una propuesta? Escribime y te respondo a la brevedad.</p>
+
+          <ul class="socials">
+            <li>
+              <a href="mailto:fernandoheredia33@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.2-.5 6.8 5.3L18.8 6H5.2ZM19 7.9l-6.4 5a1 1 0 0 1-1.2 0L5 7.9v9.6c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V7.9Z"/></svg>
+                fernandoheredia33@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/nanocarp01" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
+                github.com/nanocarp01
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/fernando-heredia-25b75b61/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.75Z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" action="https://formspree.io/f/xdoywkpe" method="POST">
+          <label>
+            <span data-i18n="form.name">Nombre</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="_replyto" required autocomplete="email">
+          </label>
+          <label>
+            <span data-i18n="form.message">Mensaje</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde el portfolio">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn btn--primary" data-i18n="form.send">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Fernando Heredia</p>
+      <a href="#home" data-i18n="footer.top">Volver arriba ↑</a>
+    </div>
+  </footer>
 
 </body>
 </html>

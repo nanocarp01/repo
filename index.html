@@ -22,6 +22,8 @@
         <a href="#about" data-i18n="nav.about">Sobre mí</a>
         <a href="#experience" data-i18n="nav.experience">Experiencia</a>
         <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="#homelab" data-i18n="nav.homelab">Servidor</a>
         <a href="#contact" data-i18n="nav.contact">Contacto</a>
       </nav>
 
@@ -209,38 +211,123 @@
       </div>
     </section>
 
-    <!--
-      PROYECTOS (pendiente). Para volver a activarlos:
-      1. Descomentá este bloque y repetí un <a class="project"> por proyecto.
-      2. Agregá de nuevo en el nav: <a href="#projects" data-i18n="nav.projects">Proyectos</a>
-      3. Renumerá Contacto a 05.
-
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
         <div class="section__head reveal">
           <span class="section__num">04</span>
-          <h2 data-i18n="projects.title">Proyectos</h2>
+          <h2 data-i18n="projects.title">Proyectos personales</h2>
         </div>
+        <p class="section__lead reveal" data-i18n="projects.lead">Lo que construyo fuera del trabajo para aprender y probar tecnologías nuevas.</p>
+
+        <!--
+          Para agregar enlace o imagen a una tarjeta:
+          - cambiá <article class="project ..."> por <a class="project ..." href="URL" target="_blank" rel="noopener noreferrer">
+          - y poné arriba del body: <div class="project__img"><img src="projects/IMAGEN.webp" alt="Nombre" loading="lazy"></div>
+        -->
         <div class="projects">
-          <a class="project reveal" href="URL_DEL_PROYECTO" target="_blank" rel="noopener noreferrer">
-            <div class="project__img"><img src="projects/IMAGEN.webp" alt="Nombre" loading="lazy"></div>
+          <article class="project reveal">
             <div class="project__body">
-              <h3>Nombre <span class="arrow" aria-hidden="true">↗</span></h3>
-              <p>Descripción breve.</p>
-              <ul class="tags"><li>Tecnología</li></ul>
+              <span class="project__kind" data-i18n="projects.1.kind">Full stack · tiempo real</span>
+              <h3>Patitas a Casa</h3>
+              <p data-i18n="projects.1.d">Plataforma para mascotas perdidas, encontradas y en adopción en la zona de Valencia. Avisos con foto y ubicación en un mapa, y chat en tiempo real entre usuarios.</p>
+              <ul class="tags"><li>Laravel 12</li><li>Reverb</li><li>Nuxt 4</li><li>Leaflet</li><li>PostgreSQL</li><li>Redis</li><li>Prometheus</li><li>Grafana</li></ul>
             </div>
-          </a>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__body">
+              <span class="project__kind" data-i18n="projects.2.kind">Full stack · API REST</span>
+              <h3 data-i18n="projects.2.t">RRHH</h3>
+              <p data-i18n="projects.2.d">Sistema de gestión de recursos humanos: API REST con autenticación por tokens y panel web, preparado para producción y publicado con dominio propio.</p>
+              <ul class="tags"><li>Laravel 12</li><li>Sanctum</li><li>Nuxt 3</li><li>Tailwind</li><li>MySQL</li><li>Nginx</li><li>Docker</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__body">
+              <span class="project__kind" data-i18n="projects.3.kind">Full stack · UI interactiva</span>
+              <h3 data-i18n="projects.3.t">Mi Biblioteca</h3>
+              <p data-i18n="projects.3.d">Biblioteca personal con una habitación de estanterías y mesas de trabajo, donde los libros se ordenan arrastrando y soltando los lomos en sus estantes.</p>
+              <ul class="tags"><li>Vue 3</li><li>Pinia</li><li>Tailwind</li><li>Express</li><li>Prisma</li><li>SQLite</li><li>Docker</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__body">
+              <span class="project__kind" data-i18n="projects.4.kind">Hardware · IA</span>
+              <h3>Olivery</h3>
+              <p data-i18n="projects.4.d">Robot de escritorio con personalidad: un ESP32 con cara en pantalla OLED y un PC que hace de cerebro (visión por cámara, voz e IA). Se controla desde el celular con una app propia y canta canciones 8-bit.</p>
+              <ul class="tags"><li>ESP32</li><li>C++</li><li>Python</li><li>Visión artificial</li><li>PWA</li><li>Cloudflare Tunnel</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__body">
+              <span class="project__kind" data-i18n="projects.5.kind">App móvil</span>
+              <h3>GymApp</h3>
+              <p data-i18n="projects.5.d">App de entrenamiento y nutrición: rutinas, registro de entrenamientos, seguimiento de calorías y un dashboard con la evolución del peso y del progreso.</p>
+              <ul class="tags"><li>React Native</li><li>Expo</li><li>TypeScript</li><li>NativeWind</li><li>SQLite</li></ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
-    -->
+
+    <!-- HOMELAB -->
+    <section id="homelab" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">05</span>
+          <h2 data-i18n="homelab.title">Mi servidor casero</h2>
+        </div>
+
+        <div class="homelab">
+          <div class="homelab__text reveal">
+            <p data-i18n="homelab.p1">Estoy aprendiendo a administrar un servidor propio. Reciclé una PC vieja, le instalé <strong>Ubuntu</strong> y ahí despliego algunos de mis proyectos personales con <strong>Docker Compose</strong>.</p>
+            <p data-i18n="homelab.p2">Para que se puedan ver fuera de la red local uso <strong>Cloudflare Tunnel</strong> con <strong>dominio propio</strong>: el tráfico entra por Cloudflare y llega al servidor sin abrir puertos en el router.</p>
+
+            <h3 class="homelab__sub" data-i18n="homelab.next">Lo próximo que quiero aprender</h3>
+            <ul class="bullets">
+              <li data-i18n="homelab.n1">Un reverse proxy para servir cada proyecto en su propio subdominio.</li>
+              <li data-i18n="homelab.n2">Backups automáticos de las bases de datos.</li>
+              <li data-i18n="homelab.n3">Monitoreo del servidor con Prometheus y Grafana.</li>
+              <li data-i18n="homelab.n4">Despliegue automático con CI/CD al hacer push.</li>
+            </ul>
+          </div>
+
+          <ol class="flow reveal" aria-label="Recorrido de una petición">
+            <li>
+              <span class="flow__step">01</span>
+              <div><strong data-i18n="homelab.f1.t">Visitante</strong><span data-i18n="homelab.f1.d">Entra desde cualquier lugar</span></div>
+            </li>
+            <li>
+              <span class="flow__step">02</span>
+              <div><strong data-i18n="homelab.f2.t">Dominio propio</strong><span data-i18n="homelab.f2.d">DNS gestionado en Cloudflare</span></div>
+            </li>
+            <li>
+              <span class="flow__step">03</span>
+              <div><strong>Cloudflare Tunnel</strong><span data-i18n="homelab.f3.d">Conexión saliente, sin abrir puertos</span></div>
+            </li>
+            <li>
+              <span class="flow__step">04</span>
+              <div><strong data-i18n="homelab.f4.t">PC vieja con Ubuntu</strong><span data-i18n="homelab.f4.d">En mi red local</span></div>
+            </li>
+            <li>
+              <span class="flow__step">05</span>
+              <div><strong>Docker Compose</strong><span data-i18n="homelab.f5.d">Un contenedor por servicio</span></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container contact">
         <div class="contact__intro reveal">
           <div class="section__head">
-            <span class="section__num">04</span>
+            <span class="section__num">06</span>
             <h2 data-i18n="contact.title">Contacto</h2>
           </div>
           <p class="contact__lead" data-i18n="contact.lead">¿Tenés un proyecto o una propuesta? Escribime y te respondo a la brevedad.</p>

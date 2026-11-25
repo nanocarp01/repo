@@ -247,6 +247,16 @@
 
           <article class="project reveal">
             <div class="project__body">
+              <span class="project__kind" data-i18n="projects.6.kind">Full stack · PWA · OCR</span>
+              <h3>TicketWise</h3>
+              <p data-i18n="projects.6.d">PWA para escanear tickets de supermercado (foto o PDF) y controlar el gasto en pareja. Lee los tickets con OCR local, sin servicios externos, y tiene reportes por categoría y supermercado, historial de precios, presupuesto mensual con avisos push y sincronización entre dispositivos. Corre en mi servidor casero.</p>
+              <span class="project__live" data-i18n="projects.6.note">Todavía no está en GitHub</span>
+              <ul class="tags"><li>Node.js</li><li>Express</li><li>React</li><li>Vite</li><li>SQLite</li><li>Tesseract OCR</li><li>Web Push</li><li>Docker</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__body">
               <span class="project__kind" data-i18n="projects.3.kind">Full stack · UI interactiva</span>
               <h3 data-i18n="projects.3.t">Mi Biblioteca</h3>
               <p data-i18n="projects.3.d">Biblioteca personal con una habitación de estanterías y mesas de trabajo, donde los libros se ordenan arrastrando y soltando los lomos en sus estantes.</p>
@@ -285,8 +295,17 @@
 
         <div class="homelab">
           <div class="homelab__text reveal">
-            <p data-i18n="homelab.p1">Estoy aprendiendo a administrar un servidor propio. Reciclé una PC vieja, le instalé <strong>Ubuntu</strong> y ahí despliego algunos de mis proyectos personales con <strong>Docker Compose</strong>.</p>
-            <p data-i18n="homelab.p2">Para que se puedan ver fuera de la red local uso <strong>Cloudflare Tunnel</strong> con <strong>dominio propio</strong>: el tráfico entra por Cloudflare y llega al servidor sin abrir puertos en el router. Cada proyecto tiene su propio subdominio, como <strong>rrhh.fhnano.com</strong>.</p>
+            <p data-i18n="homelab.p1">Estoy aprendiendo a administrar un servidor propio. Reciclé una notebook vieja (Dell Vostro con Ryzen 5 3450U, 16 GB de RAM y dos discos SSD), le instalé <strong>Ubuntu 24.04 LTS</strong> y ahí despliego mis proyectos personales con <strong>Docker Compose</strong>.</p>
+            <p data-i18n="homelab.p2">Para que se puedan ver fuera de la red local uso <strong>Cloudflare Tunnel</strong> con <strong>dominio propio</strong>: el tráfico entra por Cloudflare y llega al servidor sin abrir puertos en el router. Cada proyecto tiene su propio subdominio, como <strong>rrhh.fhnano.com</strong> o <strong>tickets.fhnano.com</strong>.</p>
+            <p data-i18n="homelab.p3">Un solo contenedor <strong>cloudflared</strong> atiende a todos los proyectos a través de una red Docker compartida. A esa red solo se conecta el servicio de entrada de cada proyecto (nginx o el front); las bases de datos y los servicios internos quedan aislados en la red privada del proyecto.</p>
+
+            <h3 class="homelab__sub" data-i18n="homelab.now">Cómo está hoy</h3>
+            <ul class="bullets">
+              <li data-i18n="homelab.c1"><strong>RRHH</strong>: 7 contenedores (API Laravel, colas, tareas programadas, WebSockets con Reverb, front en Nuxt, nginx y MySQL).</li>
+              <li data-i18n="homelab.c2"><strong>TicketWise</strong>: un único contenedor con la API en Node, la PWA, SQLite y el OCR con Tesseract.</li>
+              <li data-i18n="homelab.c3">Docker arranca con el equipo sin iniciar sesión, y los contenedores se reinician solos y tienen healthchecks.</li>
+              <li data-i18n="homelab.c4">Actualizaciones de seguridad automáticas del sistema y versiones de imágenes fijadas.</li>
+            </ul>
 
             <h3 class="homelab__sub" data-i18n="homelab.next">Lo próximo que quiero aprender</h3>
             <ul class="bullets">
@@ -312,7 +331,7 @@
             </li>
             <li>
               <span class="flow__step">04</span>
-              <div><strong data-i18n="homelab.f4.t">PC vieja con Ubuntu</strong><span data-i18n="homelab.f4.d">En mi red local</span></div>
+              <div><strong data-i18n="homelab.f4.t">Notebook vieja con Ubuntu</strong><span data-i18n="homelab.f4.d">En mi red local</span></div>
             </li>
             <li>
               <span class="flow__step">05</span>

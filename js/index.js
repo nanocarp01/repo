@@ -12,7 +12,7 @@ const EN = {
   "hero.cta1": "View experience",
   "hero.cta2": "Let's talk",
 
-  "stats.months": "months in iGaming backend",
+  "stats.years": "years of experience as a developer",
   "stats.commits": "commits in production",
   "stats.repos": "repositories",
   "stats.services": "microservices built from scratch",
@@ -32,6 +32,7 @@ const EN = {
 
   "exp.title": "Experience",
   "exp.1.date": "Jun 2025 — present",
+  "exp.1.place": "Valencia, Spain",
   "exp.1.summary": "Backend for an online casino platform and bingo hall management systems, in a microservices ecosystem.",
   "exp.1.b1": "Core casino backend (Laravel 12): player and back-office API, multi-currency wallets, deposits and withdrawals, reports and real-time updates with Laravel Reverb.",
   "exp.1.b2": "Seamless integration with game aggregators and providers: idempotent wallet, HMAC v2 signing, concurrency control and late transactions.",
@@ -116,6 +117,45 @@ const i18nNodes = document.querySelectorAll("[data-i18n]");
 const ES = {};
 i18nNodes.forEach((el) => { ES[el.dataset.i18n] = el.innerHTML.trim(); });
 
+// Duración de cada puesto (meses inclusivos, como LinkedIn) y años totales de experiencia
+function monthsBetween(from, to) {
+  const [fy, fm] = from.split("-").map(Number);
+  let ty, tm;
+  if (to) {
+    [ty, tm] = to.split("-").map(Number);
+  } else {
+    const now = new Date();
+    ty = now.getFullYear();
+    tm = now.getMonth() + 1;
+  }
+  return (ty - fy) * 12 + (tm - fm) + 1;
+}
+
+function formatDuration(months, lang) {
+  const y = Math.floor(months / 12);
+  const m = months % 12;
+  const parts = [];
+  if (lang === "en") {
+    if (y) parts.push(y + (y === 1 ? " yr" : " yrs"));
+    if (m) parts.push(m + (m === 1 ? " mo" : " mos"));
+  } else {
+    if (y) parts.push(y + (y === 1 ? " año" : " años"));
+    if (m) parts.push(m + (m === 1 ? " mes" : " meses"));
+  }
+  return parts.join(" ");
+}
+
+function renderDurations(lang) {
+  let total = 0;
+  document.querySelectorAll(".timeline__duration").forEach((el) => {
+    const months = monthsBetween(el.dataset.from, el.dataset.to);
+    total += months;
+    el.textContent = formatDuration(months, lang);
+  });
+  const years = document.getElementById("yearsExp");
+  if (years && total) years.textContent = Math.floor(total / 12) + "+";
+}
+
 function setLang(lang) {
   const dict = lang === "en" ? EN : ES;
   i18nNodes.forEach((el) => {
@@ -126,6 +166,7 @@ function setLang(lang) {
   document.querySelectorAll(".lang__btn").forEach((btn) => {
     btn.classList.toggle("is-active", btn.dataset.lang === lang);
   });
+  renderDurations(lang);
   try { localStorage.setItem("lang", lang); } catch (e) { /* sin storage */ }
 }
 
@@ -136,6 +177,7 @@ document.querySelectorAll(".lang__btn").forEach((btn) => {
 let savedLang = null;
 try { savedLang = localStorage.getItem("lang"); } catch (e) { /* sin storage */ }
 if (savedLang === "en") setLang("en");
+else renderDurations("es");
 
 // Navbar: fondo al hacer scroll
 const nav = document.getElementById("nav");

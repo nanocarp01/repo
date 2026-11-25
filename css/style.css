@@ -385,6 +385,14 @@ strong { color: var(--text); font-weight: 600; }
   letter-spacing: .08em;
   color: var(--accent-2);
 }
+.project__live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 400 .8rem var(--mono);
+  color: var(--accent-2);
+}
+.project__live .dot { width: 6px; height: 6px; box-shadow: 0 0 0 3px rgba(94,234,212,.15); }
 .section__lead { color: var(--muted); font-size: 1.05rem; margin: -24px 0 36px; max-width: 620px; }
 
 /* ---------- Homelab ---------- */

@@ -288,7 +288,9 @@ strong { color: var(--text); font-weight: 600; }
   border-radius: var(--radius);
   background: var(--bg-soft);
 }
+.timeline__meta { display: flex; flex-direction: column; gap: 4px; }
 .timeline__date { font: 400 .85rem var(--mono); color: var(--muted); }
+.timeline__place { font-size: .85rem; color: var(--muted); opacity: .8; }
 .timeline__content h3 { font-size: 1.25rem; letter-spacing: -.02em; }
 .timeline__content .at { color: var(--accent); font-weight: 500; }
 .timeline__summary { color: var(--muted); margin: 6px 0 18px; }

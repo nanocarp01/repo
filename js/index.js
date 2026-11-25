@@ -78,9 +78,9 @@ const EN = {
 
   "homelab.title": "My home server",
   "homelab.p1": "I'm learning to run my own server. I repurposed an old PC, installed <strong>Ubuntu</strong> on it, and deploy some of my side projects there with <strong>Docker Compose</strong>.",
-  "homelab.p2": "To make them reachable outside my local network I use <strong>Cloudflare Tunnel</strong> with <strong>my own domain</strong>: traffic comes in through Cloudflare and reaches the server without opening any ports on the router.",
+  "homelab.p2": "To make them reachable outside my local network I use <strong>Cloudflare Tunnel</strong> with <strong>my own domain</strong>: traffic comes in through Cloudflare and reaches the server without opening any ports on the router. Each project gets its own subdomain, such as <strong>rrhh.fhnano.com</strong>.",
   "homelab.next": "What I want to learn next",
-  "homelab.n1": "A reverse proxy to serve each project on its own subdomain.",
+  "homelab.n1": "Hardening the server: key-only SSH access, a firewall and Fail2ban.",
   "homelab.n2": "Automated database backups.",
   "homelab.n3": "Server monitoring with Prometheus and Grafana.",
   "homelab.n4": "Automatic deployment with CI/CD on push.",
